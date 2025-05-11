@@ -20,17 +20,17 @@ setInterval(createHeart, 800);
 
 // Poemas e imagens
 const poemas = [
-  "Poema 1: Mãe, seu amor é o sol que aquece meu coração.",
-  "Poema 2: Em cada gesto seu, encontro paz.",
-  "Poema 3: Sua força me inspira todos os dias.",
-  "Poema 4: Seu sorriso é meu porto seguro.",
-  "Poema 5: Obrigado por nunca desistir de mim.",
-  "Poema 6: Mãe, seu carinho me moldou.",
-  "Poema 7: Sua voz é a melodia da minha vida.",
-  "Poema 8: Seu amor é infinito como o céu.",
-  "Poema 9: Cada momento com você é precioso.",
-  "Poema 10: Você é meu exemplo de amor e coragem.",
-  "Poema 11: Te amo mais do que palavras podem dizer."
+  "Mãe, seu amor é o sol que aquece meu coração.",
+  "Em cada gesto seu, encontro paz.",
+  "Sua força me inspira todos os dias.",
+  "Seu sorriso é meu porto seguro.",
+  "Obrigado por nunca desistir de mim.",
+  "Mãe, seu carinho me moldou.",
+  "Sua voz é a melodia da minha vida.",
+  "Seu amor é infinito como o céu.",
+  "Cada momento com você é precioso.",
+  "Você é meu exemplo de amor e coragem.",
+  "Te amo mais do que palavras podem dizer."
 ];
 
 const imagens = [
