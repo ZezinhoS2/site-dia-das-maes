@@ -1,13 +1,9 @@
 const bgMusic = document.getElementById("bgMusic");
 bgMusic.volume = 0.5;
 
-// Toca a música após o primeiro clique do usuário
+// Toca a música automaticamente ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
-  const iniciarMusica = () => {
-    bgMusic.play().catch(() => console.log("Autoplay bloqueado"));
-    document.body.removeEventListener("click", iniciarMusica);
-  };
-  document.body.addEventListener("click", iniciarMusica);
+  bgMusic.play().catch(() => console.log("Autoplay bloqueado"));
 });
 
 // Corações flutuantes

@@ -3,38 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Feliz Dia das Mães</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <title>Surpresa para Mamãe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffd1dc, #ffe6f0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+    }
+    .present-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 3em;
+      animation: pulse 2s infinite;
+      color: #d84b7b;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .present-button:hover {
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
 </head>
 <body>
+  <button class="present-button" onclick="abrirPresente()">🎁<br>Toque para abrir o presente</button>
 
-  <audio id="bgMusic" loop>
-    <source src="imagens/Como É Grande o Meu Amor Por Você (Versão Remasterizada).mp3" type="audio/mp3">
-    Seu navegador não suporta áudio.
-  </audio>
-
-  <div class="hearts-container" id="heartsContainer"></div>
-
-  <div class="container">
-    <h1><span class="titulo-destaque">Feliz Dia das Mães</span><br> ❤️</h1>
-
-    <div class="carousel">
-      <div class="carousel-track" id="carouselTrack"></div>
-      <div class="carousel-buttons">
-        <button class="nav-btn" onclick="moverCarrossel(-1)">⟵</button>
-        <button class="nav-btn" onclick="moverCarrossel(1)">⟶</button>
-      </div>
-    </div>
-
-    <div class="poema" id="poema">
-      <p>Toque nas fotos ou use os botões para ver os poemas.</p>
-    </div>
-
-    <h1><span class="titulo-destaque">Mãe, eu te amo</span><br></h1>
-    <div class="mensagem-final"> ❤️</div>
-  </div>
-
-  <script src="script.js"></script>
+  <script>
+    function abrirPresente() {
+      // Redireciona para a página principal
+      window.location.href = "principal.html?play=1";  // Passando o parâmetro play=1
+    }
+  </script>
 </body>
 </html>
