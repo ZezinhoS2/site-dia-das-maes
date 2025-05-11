@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: #f5f5f5;
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.container {
+  padding: 20px;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  color: #d84b7b;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2em;
+  color: #d84b7b;
+  z-index: 10;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.poema {
+  background-color: #f9e6e6;
+  color: #444;
+  font-size: 1.2em;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  max-width: 80%;
+  margin: 30px auto;
+}
+
+.poema p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-style: italic;
+  color: #d84b7b;
+  font-size: 1.3em;
+}
+
+.mensagem-final {
+  font-size: 3em;
+  color: #d84b7b;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: aparecer 3s forwards 5s, repetir 10s infinite, bater 1s infinite;
+  font-weight: 700;
+ 
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+@keyframes repetir {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(2.2);
+  }
+}
+
+@keyframes bater {
+  0%, 100% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(2.2);
+  }
+}
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  top: 100%;
+  font-size: 2rem;
+  animation: subir 6s linear forwards;
+  pointer-events: none;
+  color: #ff5ca2;
+  opacity: 0.8;
+}
+
+@keyframes subir {
+  0% {
+    transform: transla  teY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .carousel-track img {
+    height: 250px;
+  }
+
+  .poema {
+    font-size: 1.1em;
+  }
+
+  .mensagem-final {
+    font-size: 2.5em;
+  }
+
+  .nav-btn {
+    font-size: 1.5em;
+    padding: 5px 8px;
+  }
+}
