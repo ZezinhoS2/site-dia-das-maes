@@ -1,7 +1,7 @@
 const bgMusic = document.getElementById("bgMusic");
 bgMusic.volume = 0.5;
 
-// Toca a música somente após o primeiro clique do usuário
+// Toca a música após o primeiro clique do usuário
 document.addEventListener("DOMContentLoaded", () => {
   const iniciarMusica = () => {
     bgMusic.play().catch(() => console.log("Autoplay bloqueado"));
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", iniciarMusica);
 });
 
-// Floating hearts com estilo bonito e espalhado
+// Corações flutuantes
 function createHeart() {
   const heart = document.createElement("div");
   heart.classList.add("heart");
@@ -37,7 +37,6 @@ const poemas = [
   "Poema 11: Te amo mais do que palavras podem dizer."
 ];
 
-// Caminhos atualizados das imagens (da pasta "imagens")
 const imagens = [
   "imagens/1.jpeg",
   "imagens/2.jpeg",
@@ -77,3 +76,5 @@ function moverCarrossel(direcao) {
   mostrarPoema(currentIndex);
 }
 
+// Mostrar o primeiro poema ao carregar
+mostrarPoema(0);

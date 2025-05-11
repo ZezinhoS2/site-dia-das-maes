@@ -10,9 +10,9 @@
 <body>
 
   <audio id="bgMusic" loop>
-  <source src="imagens/Como É Grande o Meu Amor Por Você (Versão Remasterizada).mp3" type="audio/mp3">
-  Seu navegador não suporta áudio.
-</audio>
+    <source src="imagens/Como É Grande o Meu Amor Por Você (Versão Remasterizada).mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
 
   <div class="hearts-container" id="heartsContainer"></div>
 
@@ -20,19 +20,21 @@
     <h1><span class="titulo-destaque">Feliz Dia das Mães</span><br> ❤️</h1>
 
     <div class="carousel">
-      <button class="nav-btn left" onclick="moverCarrossel(-1)">⟵</button>
       <div class="carousel-track" id="carouselTrack"></div>
-      <button class="nav-btn right" onclick="moverCarrossel(1)">⟶</button>
+      <div class="carousel-buttons">
+        <button class="nav-btn" onclick="moverCarrossel(-1)">⟵</button>
+        <button class="nav-btn" onclick="moverCarrossel(1)">⟶</button>
+      </div>
     </div>
 
     <div class="poema" id="poema">
       <p>Toque nas fotos ou use os botões para ver os poemas.</p>
     </div>
-     <h1><span class="titulo-destaque">Mãe, eu te amo</span><br></h1>
+
+    <h1><span class="titulo-destaque">Mãe, eu te amo</span><br></h1>
     <div class="mensagem-final"> ❤️</div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
